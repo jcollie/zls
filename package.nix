@@ -27,7 +27,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       ]
     );
   };
-  deps = callPackage ./deps.nix { name = "zls-cache-${zlsVersionFull}"; };
+  deps = callPackage ./deps.nix { name = "zls-cache-${finalAttrs.version}"; };
   nativeBuildInputs = [ zig ];
   dontSetZigDefaultFlags = true;
   doCheck = true;
