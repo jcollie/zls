@@ -13,7 +13,7 @@ let
   target = builtins.replaceStrings [ "darwin" ] [ "macos" ] stdenv.hostPlatform.system;
 in
 stdenvNoCC.mkDerivation (finalAttrs: {
-  name = "zls";
+  pname = "zls";
   version = zlsVersionShort;
   src = fs.toSource {
     root = ./.;
